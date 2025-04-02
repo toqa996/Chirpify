@@ -8,7 +8,7 @@ if (!isset($_SESSION["user_id"])) {
     exit;
 }
 
-// Fetch current user info
+// Fetch current user info.
 $user_id = $_SESSION["user_id"];
 $stmt = $conn->prepare("SELECT username FROM users WHERE id = ?");
 $stmt->bind_param("i", $user_id);
